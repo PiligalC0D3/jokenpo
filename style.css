@@ -14,27 +14,19 @@ body, html {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       color: #333;
+      background-color: #333;
     }
-
-    /* Estilo do vídeo para ocupar o fundo inteiro */
-    .video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 150%;
-      min-height: 150%;
-      z-index: -13
-      object-fit: cover;
-    }
+  
 
     /* Conteúdo da página */
     .conteudo {
       position: relative;
       z-index: 3;
-      color: rgb(172, 50, 50);
+      color: rgb(207, 195, 195);
       text-align: center;
       padding-top: 0%;
       font-size: 1em;
+      font-size:30px;
     }
 
     
@@ -42,4 +34,9 @@ body, html {
       font-size: 2.5em;
       margin-bottom: 20px;
       z-index: 2;
+    }
+
+    button{
+      font-size: 40px;
+      margin-bottom: 27px;
     }
