@@ -1,42 +1,79 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(145deg, #101820, #1a1a2e);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+}
 
+h1 {
+  font-size: 3rem;
+  color: #00ffd5;
+  margin-bottom: 20px;
+}
 
-body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      background-color: #333;
-    }
-  
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
 
-    /* Conteúdo da página */
-    .conteudo {
-      position: relative;
-      z-index: 3;
-      color: rgb(207, 195, 195);
-      text-align: center;
-      padding-top: 0%;
-      font-size: 1em;
-      font-size:30px;
-    }
+.scoreboard span {
+  font-size: 1.6rem;
+  color: #00ffd5;
+}
 
-    
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      z-index: 2;
-    }
+.choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
-    button{
-      font-size: 40px;
-      margin-bottom: 27px;
-    }
+.choice {
+  border: 2px solid #00ffd5;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: #111;
+}
+
+.choice:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffd5;
+}
+
+.choice img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.choice-label {
+  padding: 10px;
+  background: #00ffd5;
+  color: #000;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 40px;
+  font-size: 1.8rem;
+  min-height: 2em;
+}
+
+.versus {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #aaa;
+}
