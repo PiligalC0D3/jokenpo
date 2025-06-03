@@ -28,3 +28,21 @@
       document.getElementById('playerScore').textContent = playerScore;
       document.getElementById('botScore').textContent = botScore;
     }
+
+    const imageStates = {
+      pedra: ['img/pedraSorrindo.png', 'img/pedraAssustada.png' , 'img/pedraZangada.png'],
+      papel: ['img/papelSorrindo.png', 'img/papelAssustado.png' , 'img/papelZangado.png'],
+      tesoura: ['img/tesouraSorrindo.png', 'img/tesouraAssustada.png' , 'img/tesouraZangada.png']
+    };
+
+    const currentIndex = {
+      pedra: 0,
+      papel: 0,
+      tesoura: 0
+    };
+
+    function toggleImage(element, type) {
+      currentIndex[type] = (currentIndex[type] + 1) % imageStates[type].length;
+      const newSrc = imageStates[type][currentIndex[type]];
+      element.querySelector('img').src = newSrc;
+    }

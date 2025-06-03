@@ -77,3 +77,11 @@ h1 {
   margin-top: 10px;
   color: #aaa;
 }
+
+.choice img {
+  transition: transform 0.3s ease;
+  width: 200px;
+  height: 200px
+
+}
+
