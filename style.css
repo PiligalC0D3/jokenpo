@@ -4,12 +4,25 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background: linear-gradient(145deg, #101820, #1a1a2e);
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px 20px 0; /* tira o padding do bottom */
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+main.content {
+  flex: 1;
 }
 
 h1 {
@@ -53,10 +66,11 @@ h1 {
 }
 
 .choice img {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .choice-label {
@@ -78,64 +92,66 @@ h1 {
   color: #aaa;
 }
 
-.choice img {
-  transition: transform 0.3s ease;
-  width: 200px;
-  height: 200px
-
-}
-
-
-video {
-  width: 101%;
-  max-width: 80%;
-  max-height: 50%;
-  border-radius: 1px;
-  margin-top: 20px;
-  object-fit: cover;
-
-}
-
-
 .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Fica no fundo da página */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
 video#video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .video-container::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* escurece o vídeo */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 body > *:not(.video-container) {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
+/* Footer fixado ao final da página, sem sobrepor */
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: auto; /* empurra o footer para o fim */
+}
+
+.footer a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
   .choices {
-    flex-direction: row; /* Garante linha mesmo no mobile */
+    flex-direction: row;
     gap: 0.5rem;
   }
 

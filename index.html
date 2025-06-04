@@ -2,47 +2,56 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Jokenpô com Imagens</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Jokenpô com Imagens</title>
 </head>
 
 <body>
-    
+  <div class="video-container">
+    <video id="video" autoplay loop muted>
+      <source src="img/nature.mp4" type="video/mp4">
+      Seu navegador não suporta o vídeo.
+    </video>
+  </div>
+
+  <main class="content">
     <h1>Jokenpô com Estilo</h1>
 
     <div class="scoreboard">
-        <div>👤 Você: <span id="playerScore">0</span></div>
-        <div>🤖 Bot: <span id="botScore">0</span></div>
+      <div>👤 Você: <span id="playerScore">0</span></div>
+      <div>🤖 Bot: <span id="botScore">0</span></div>
     </div>
 
     <div class="choices">
-    <div class="choice">
-        <img src="img/pedraSorrindo.png" alt="Pedra" onclick="play('pedra'); toggleImage(this.parentElement, 'pedra')">
+      <div class="choice">
+        <img src="img/pedraSorrindo.png" alt="Pedra"
+          onclick="play('pedra'); toggleImage(this.parentElement, 'pedra')">
         <div class="choice-label">Pedra</div>
-    </div>
-    <div class="choice">
-        <img src="img/papelSorrindo.png" alt="Papel" onclick="play('papel'); toggleImage(this.parentElement, 'papel')">
+      </div>
+      <div class="choice">
+        <img src="img/papelSorrindo.png" alt="Papel"
+          onclick="play('papel'); toggleImage(this.parentElement, 'papel')">
         <div class="choice-label">Papel</div>
-    </div>
-    <div class="choice">
-        <img src="img/tesouraSorrindo.png" alt="Tesoura" onclick="play('tesoura'); toggleImage(this.parentElement, 'tesoura')">
+      </div>
+      <div class="choice">
+        <img src="img/tesouraSorrindo.png" alt="Tesoura"
+          onclick="play('tesoura'); toggleImage(this.parentElement, 'tesoura')">
         <div class="choice-label">Tesoura</div>
+      </div>
     </div>
-</div>
 
     <div class="result" id="resultado">Faça sua escolha!</div>
     <div class="versus" id="versusInfo"></div>
+  </main>
 
+  <footer class="footer">
+    <p>© 2025 Jokenpô Estilizado. Todos os direitos reservados.</p>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/michel-santos-1b3b1b6a/" target="_blank">Michel Silva</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
-<div class="video-container">
-    <video id="video" autoplay loop muted>
-        <source src="img/nature.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-</div>
-<script src="script.js"></script>
 
 </html>
