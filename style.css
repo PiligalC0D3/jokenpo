@@ -127,3 +127,28 @@ video#video {
     background: rgba(0, 0, 0, 0.5); /* escurece o vídeo */
     z-index: 1;
 }
+
+body > *:not(.video-container) {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .choices {
+    flex-direction: row; /* Garante linha mesmo no mobile */
+    gap: 0.5rem;
+  }
+
+  .choice {
+    width: 80px;
+  }
+
+  .choice img {
+    max-width: 80px;
+    height: 100px;
+  }
+
+  .choice-label {
+    font-size: 0.75rem;
+  }
+}
