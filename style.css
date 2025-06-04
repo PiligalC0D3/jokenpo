@@ -22,7 +22,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 40px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 30px;
 }
 
@@ -73,7 +73,7 @@ h1 {
 }
 
 .versus {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 10px;
   color: #aaa;
 }
@@ -85,3 +85,45 @@ h1 {
 
 }
 
+
+video {
+  width: 101%;
+  max-width: 80%;
+  max-height: 50%;
+  border-radius: 1px;
+  margin-top: 20px;
+  object-fit: cover;
+
+}
+
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Fica no fundo da página */
+}
+
+video#video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* escurece o vídeo */
+    z-index: 1;
+}
