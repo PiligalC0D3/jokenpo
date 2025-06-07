@@ -7,7 +7,7 @@ Um projeto divertido e visualmente estilizado do clássico **JoKenPo (Pedra, Pap
 ![Demonstração do Projeto](assets/preview.gif)
 <!-- Certifique-se de que o GIF esteja salvo no caminho correto, como "assets/preview.gif" -->
 <img src="img/readme.PNG">
-> **Link ao vivo (opcional)**: [Ver Demo](https://jokenpomichel.netlify.app/)
+> **Link ao vivo [Ver Demo](https://jokenpomichel.netlify.app/)
 
 ---
 
